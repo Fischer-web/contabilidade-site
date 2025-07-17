@@ -5,11 +5,13 @@
   border: 1px solid rgba(249, 87, 0, 0.1);
   border-radius: 12px;
   padding: 2rem;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .card::before {
@@ -48,6 +50,8 @@
   border-radius: 12px;
   position: relative;
   z-index: 2;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  will-change: background, border-color;
 }
 
 .iconContainer svg {
@@ -96,10 +100,16 @@
   transition: transform 0.3s ease;
 }
 
+.link:hover .arrow {
+  transform: translateX(4px);
+}
+
 /* Service Variant */
 .service {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   border-color: rgba(249, 87, 0, 0.15);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .service:hover {
@@ -113,6 +123,8 @@
 .service .iconContainer {
   background: linear-gradient(135deg, rgba(249, 87, 0, 0.2), rgba(249, 87, 0, 0.1));
   border: 2px solid var(--orange-primary);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  will-change: background, border-color;
 }
 
 .service .iconContainer svg {

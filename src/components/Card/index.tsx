@@ -27,28 +27,20 @@ export function Card({
   const cardVariants = {
     hidden: { 
       opacity: 0, 
-      y: 50,
-      scale: 0.95
+      y: 30,
+      scale: 0.98
     },
-    visible: {
-      opacity: 1,
+    visible: { 
+      opacity: 1, 
       y: 0,
-      scale: 1
+      scale: 1,
+      transition: {
+        duration: 0.5
+      }
     }
   };
 
-  const iconVariants = {
-    hover: {
-      scale: 1.1,
-      rotate: 5
-    }
-  };
 
-  const arrowVariants = {
-    hover: {
-      x: 5
-    }
-  };
 
   const handleLinkClick = (e: React.MouseEvent) => {
     if (link?.onClick) {
@@ -64,15 +56,12 @@ export function Card({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      whileHover="hover"
+      style={{ willChange: 'transform, opacity' }}
     >
       {icon && (
-        <motion.div 
-          className={styles.iconContainer}
-          variants={iconVariants}
-        >
+        <div className={styles.iconContainer}>
           {icon}
-        </motion.div>
+        </div>
       )}
       
       <div className={styles.content}>
@@ -80,16 +69,14 @@ export function Card({
         <p className={styles.description}>{description}</p>
         
         {link && (
-          <motion.a
+          <a
             href={link.href}
             className={styles.link}
             onClick={handleLinkClick}
-            whileHover="hover"
           >
             <span>{link.text}</span>
-            <motion.svg
+            <svg
               className={styles.arrow}
-              variants={arrowVariants}
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -103,8 +90,8 @@ export function Card({
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </motion.svg>
-          </motion.a>
+            </svg>
+          </a>
         )}
       </div>
     </motion.div>
