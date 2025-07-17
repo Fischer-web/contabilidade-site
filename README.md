@@ -106,7 +106,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📞 Contato
 
-Seu Nome - [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
+Seu Nome - loginwebdevelopment@gmail.com
 
 Link do Projeto: [https://github.com/Fischer-web/contabilidade-site](https://github.com/Fischer-web/contabilidade-site)
 
