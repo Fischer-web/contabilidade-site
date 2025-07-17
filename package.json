@@ -2,6 +2,11 @@
   "name": "contabilidade-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://fischer-web.github.io/contabilidade-site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fischer-web/contabilidade-site.git"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
