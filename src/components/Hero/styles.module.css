@@ -117,6 +117,13 @@
   z-index: 1000;
   width: fit-content;
   pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.scrollIndicator.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .scrollMouse {

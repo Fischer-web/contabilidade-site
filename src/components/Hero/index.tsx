@@ -11,11 +11,10 @@ export function Hero() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
       
-      // Detecta quando o usuário sai da seção Hero (primeira seção)
-      // Usa 40% da altura da tela como threshold
-      const threshold = windowHeight * 0.4;
+      // Detecta quando o usuário começa a rolar
+      // Usa apenas 50px como threshold para desaparecer rapidamente
+      const threshold = 50;
       
       if (scrollPosition > threshold) {
         setShowScrollIndicator(false);
