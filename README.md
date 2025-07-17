@@ -28,7 +28,7 @@ Um site moderno e responsivo para serviços de contabilidade, desenvolvido com R
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/contabilidade-site.git
+git clone https://github.com/Fischer-web/contabilidade-site.git
 cd contabilidade-site
 ```
 
@@ -108,7 +108,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 Seu Nome - [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
 
-Link do Projeto: [https://github.com/seu-usuario/contabilidade-site](https://github.com/seu-usuario/contabilidade-site)
+Link do Projeto: [https://github.com/Fischer-web/contabilidade-site](https://github.com/Fischer-web/contabilidade-site)
 
 ---
 
