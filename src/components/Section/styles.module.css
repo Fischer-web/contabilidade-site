@@ -1,0 +1,176 @@
+/* src/components/Section/styles.module.css */
+
+.section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section.default {
+  background-color: var(--background);
+}
+
+.section.dark {
+  background-color: #0f0f0f;
+}
+
+.section.gradient {
+  background: linear-gradient(135deg, var(--background) 0%, #0f0f0f 50%, var(--background) 100%);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.container.small {
+  max-width: 600px;
+}
+
+.container.medium {
+  max-width: 900px;
+}
+
+.container.large {
+  max-width: 1200px;
+}
+
+.container.full {
+  max-width: 100%;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange-primary), #ff6b00);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  position: relative;
+}
+
+/* Section Variants */
+.dark .title {
+  color: var(--white);
+}
+
+.dark .subtitle {
+  color: var(--text-primary);
+}
+
+.gradient .title {
+  background: linear-gradient(135deg, var(--white), var(--orange-primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.gradient .title::after {
+  background: linear-gradient(90deg, var(--orange-primary), var(--white), var(--orange-primary));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+  
+  .title::after {
+    width: 40px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient .title {
+    background: var(--white);
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    text-fill-color: initial;
+    color: var(--white);
+  }
+  
+  .title::after {
+    background: var(--orange-primary);
+  }
+}
+
+/* Print styles */
+@media print {
+  .section {
+    padding: 2rem 0;
+    background: white !important;
+  }
+  
+  .title {
+    color: black !important;
+  }
+  
+  .subtitle {
+    color: #666 !important;
+  }
+  
+  .title::after {
+    display: none;
+  }
+}

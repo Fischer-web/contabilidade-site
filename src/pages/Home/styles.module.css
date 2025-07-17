@@ -1,0 +1,195 @@
+/* src/pages/Home/styles.module.css */
+
+.home {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Seção Diferenciais */
+.diferenciais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Seção Serviços */
+.servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* CTA Final */
+.ctaFinal {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--gray-medium);
+  margin: 0 0 2rem 0;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .diferenciais {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .servicos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .ctaFinal {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ctaButtons button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diferenciais,
+  .servicos {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .ctaFinal {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+  }
+
+  .ctaText {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .ctaButtons {
+    gap: 0.5rem;
+  }
+}
+
+/* Tablet específico */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .diferenciais {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+  .diferenciais {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .servicos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .ctaFinal {
+    padding: 3rem;
+  }
+
+  .ctaText {
+    font-size: 1.2rem;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .ctaFinal {
+    background: var(--white);
+    border: 2px solid var(--soft-black);
+    color: var(--soft-black);
+  }
+
+  .ctaText {
+    color: var(--soft-black);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .diferenciais,
+  .servicos,
+  .ctaFinal {
+    animation: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .home {
+    background: white !important;
+  }
+
+  .ctaFinal {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    color: black !important;
+  }
+
+  .ctaText {
+    color: black !important;
+  }
+
+  .ctaButtons {
+    display: none;
+  }
+
+  .diferenciais,
+  .servicos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    page-break-inside: avoid;
+  }
+}

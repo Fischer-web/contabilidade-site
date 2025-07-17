@@ -1,0 +1,214 @@
+/* src/components/Card/styles.module.css */
+
+.card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(249, 87, 0, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(249, 87, 0, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(249, 87, 0, 0.2);
+  border-color: rgba(249, 87, 0, 0.3);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.iconContainer {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--orange-primary), #ff6b00);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.iconContainer svg {
+  width: 28px;
+  height: 28px;
+  color: var(--white);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--orange-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--white);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Service Variant */
+.service {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-color: rgba(249, 87, 0, 0.15);
+}
+
+.service:hover {
+  background: linear-gradient(145deg, rgba(249, 87, 0, 0.1), rgba(249, 87, 0, 0.05));
+  transform: translateY(-10px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(249, 87, 0, 0.4);
+}
+
+.service .iconContainer {
+  background: linear-gradient(135deg, rgba(249, 87, 0, 0.2), rgba(249, 87, 0, 0.1));
+  border: 2px solid var(--orange-primary);
+}
+
+.service .iconContainer svg {
+  color: var(--orange-primary);
+}
+
+.service:hover .iconContainer {
+  background: linear-gradient(135deg, var(--orange-primary), #ff6b00);
+  border-color: var(--orange-primary);
+}
+
+.service:hover .iconContainer svg {
+  color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .iconContainer svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+  }
+  
+  .iconContainer {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .iconContainer svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--orange-primary);
+  }
+  
+  .card:hover {
+    background: rgba(249, 87, 0, 0.2);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .iconContainer,
+  .arrow,
+  .link {
+    transition: none;
+  }
+}

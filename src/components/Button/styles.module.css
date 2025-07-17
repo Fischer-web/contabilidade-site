@@ -1,0 +1,35 @@
+/* src/components/Button/styles.module.css (VERSÃO ATUALIZADA) */
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid var(--orange-primary); /* Borda sempre laranja */
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Variante Primária: Fundo Laranja */
+.primary {
+  background-color: var(--orange-primary);
+  color: var(--white);
+}
+
+.primary:hover {
+  background-color: transparent;
+  color: var(--orange-primary);
+}
+
+/* Variante Secundária: Apenas Contorno */
+.secondary {
+  background-color: transparent;
+  color: var(--orange-primary);
+}
+
+.secondary:hover {
+  background-color: var(--orange-primary);
+  color: var(--white);
+}

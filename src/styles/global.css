@@ -1,0 +1,39 @@
+/* src/styles/global.css (VERSÃO ATUALIZADA) */
+
+/* Reset de Estilos Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* NOVAS Variáveis de Cores da Marca */
+:root {
+  --background: #1A1A1A;     /* Preto Suave (não absoluto) */
+  --orange-primary: #f28000; /* Laranja principal da marca (extraído do logo) */
+  --white: #FFFFFF;          /* Branco puro para destaques */
+  --text-primary: #E0E0E0;   /* Cinza muito claro para texto principal */
+  --text-secondary: #A0A0A0; /* Cinza para texto de suporte */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+a {
+  color: var(--orange-primary);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}

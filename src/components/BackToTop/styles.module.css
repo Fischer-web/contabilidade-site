@@ -1,0 +1,62 @@
+/* src/components/BackToTop/styles.module.css */
+
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background-color: var(--orange-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(242, 128, 0, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(242, 128, 0, 0.2);
+}
+
+.backToTop:hover {
+  background-color: var(--white);
+  color: var(--orange-primary);
+  box-shadow: 0 6px 25px rgba(242, 128, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.backToTop:active {
+  transform: translateY(0);
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .backToTop {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .backToTop {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .text {
+    display: none;
+  }
+}

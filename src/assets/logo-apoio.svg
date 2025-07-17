@@ -1,0 +1,23 @@
+<svg width="1000" height="200" viewBox="0 0 1000 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Apoio Contabilidade -->
+  
+  <!-- Letra A -->
+  <path d="M16 64C16 64 16 64 16 64L16 136C16 152.569 29.4315 166 46 166L166 166C182.569 166 196 152.569 196 136L196 136C196 119.431 182.569 106 166 106L76 106L76 94L166 94C182.569 94 196 80.5685 196 64L196 64C196 47.4315 182.569 34 166 34L46 34C29.4315 34 16 47.4315 16 64Z" fill="#f28000"/>
+  <rect x="76" y="124" width="90" height="12" fill="white"/>
+  
+  <!-- Letra P -->
+  <path d="M236 34C236 17.4315 249.431 4 266 4L386 4C419.137 4 446 30.8629 446 64L446 64C446 97.1371 419.137 124 386 124L296 124L296 166C296 182.569 282.569 196 266 196L266 196C249.431 196 236 182.569 236 166L236 34Z" fill="#f28000"/>
+  <rect x="296" y="34" width="90" height="60" fill="white"/>
+  
+  <!-- Letra O (primeira) -->
+  <ellipse cx="546" cy="100" rx="100" ry="96" fill="#f28000"/>
+  <ellipse cx="546" cy="100" rx="50" ry="48" fill="white"/>
+  
+  <!-- Letra I -->
+  <ellipse cx="746" cy="24" rx="24" ry="20" fill="#f28000"/>
+  <rect x="722" y="64" width="48" height="132" rx="24" fill="#f28000"/>
+  
+  <!-- Letra O (segunda) -->
+  <ellipse cx="846" cy="100" rx="100" ry="96" fill="#f28000"/>
+  <ellipse cx="846" cy="100" rx="50" ry="48" fill="white"/>
+</svg>
