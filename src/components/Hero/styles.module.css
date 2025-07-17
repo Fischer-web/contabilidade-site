@@ -10,7 +10,109 @@
   background: linear-gradient(135deg, var(--background) 0%, #0f0f0f 100%);
 }
 
-.backgroundAnimation {
+/* Camada 1 - Calculadora e Documentos (velocidade mais lenta) */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMDAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIENhbGN1bGFkb3JhIC0tPgogIDxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiNGRjg1MDAiIG9wYWNpdHk9IjAuMyIgcng9IjgiLz4KICA8cmVjdCB4PSI2MCIgeT0iOTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgZmlsbD0iI0ZGRiIgb3BhY2l0eT0iMC44IiByeD0iMiIvPgogIDxyZWN0IHg9IjkwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjgiIHJ4PSIyIi8+CiAgPHJlY3QgeD0iMTIwIiB5PSI5MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjgiIHJ4PSIyIi8+CiAgPHJlY3QgeD0iNjAiIHk9IjExMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjgiIHJ4PSIyIi8+CiAgPHJlY3QgeD0iOTAiIHk9IjExMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjgiIHJ4PSIyIi8+CiAgPHJlY3QgeD0iMTIwIiB5PSIxMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgZmlsbD0iI0ZGRiIgb3BhY2l0eT0iMC44IiByeD0iMiIvPgogIDxyZWN0IHg9IjYwIiB5PSIxMzAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgZmlsbD0iI0ZGRiIgb3BhY2l0eT0iMC44IiByeD0iMiIvPgogIDxyZWN0IHg9IjkwIiB5PSIxMzAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNSIgZmlsbD0iI0ZGRiIgb3BhY2l0eT0iMC44IiByeD0iMiIvPgogIDxyZWN0IHg9IjEyMCIgeT0iMTMwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIGZpbGw9IiNGRkYiIG9wYWNpdHk9IjAuOCIgcng9IjIiLz4KICA8cmVjdCB4PSI2MCIgeT0iMTUwIiB3aWR0aD0iODAiIGhlaWdodD0iMTUiIGZpbGw9IiM0RjQ2RTUiIG9wYWNpdHk9IjAuNiIgcng9IjIiLz4KCiAgPCEtLSBEb2N1bWVudG9zIC0tPgogIDxyZWN0IHg9IjMwMCIgeT0iODAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTUwIiBmaWxsPSIjRkZGIiBvcGFjaXR5PSIwLjQiIHJ4PSI0Ii8+CiAgPGxpbmUgeDE9IjMyMCIgeTE9IjExMCIgeDI9IjM4MCIgeTI9IjExMCIgc3Ryb2tlPSIjMzMzMzMzIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNiIvPgogIDxsaW5lIHgxPSIzMjAiIHkxPSIxMzAiIHgyPSI0MDAiIHkyPSIxMzAiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjYiLz4KICA8bGluZSB4MT0iMzIwIiB5MT0iMTUwIiB4Mj0iMzcwIiB5Mj0iMTUwIiBzdHJva2U9IiMzMzMzMzMiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC42Ii8+CiAgPGxpbmUgeDE9IjMyMCIgeTE9IjE3MCIgeDI9IjM5MCIgeTI9IjE3MCIgc3Ryb2tlPSIjMzMzMzMzIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNiIvPgogIDxsaW5lIHgxPSIzMjAiIHkxPSIxOTAiIHgyPSIzNjAiIHkyPSIxOTAiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: 1;
+  transform: translateY(var(--parallax-y1, 0px)) translateX(var(--parallax-x1, 0px));
+  will-change: transform;
+}
+
+/* Camada 2 - Gráficos e Moedas */
+.hero .parallax-layer-2 {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  right: 15%;
+  bottom: 5%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMDAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEdyw6FmaWNvIGRlIEJhcnJhcyAtLT4KICA8cmVjdCB4PSI1NTAiIHk9IjIwMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRGNDZFNSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjQiLz4KICA8cmVjdCB4PSI1NzAiIHk9IjI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjQwIiBmaWxsPSIjM0I4MkY2IiBvcGFjaXR5PSIwLjYiLz4KICA8cmVjdCB4PSI1OTUiIHk9IjI1MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjYwIiBmaWxsPSIjRkY4NTAwIiBvcGFjaXR5PSIwLjYiLz4KICA8cmVjdCB4PSI2MjAiIHk9IjIzMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzRBODUzIiBvcGFjaXR5PSIwLjYiLz4KICA8cmVjdCB4PSI2NDUiIHk9IjI2MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjUwIiBmaWxsPSIjRUE0MzM1IiBvcGFjaXR5PSIwLjYiLz4KICA8cmVjdCB4PSI2NzAiIHk9IjI0MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjcwIiBmaWxsPSIjOUM5OUZGIiBvcGFjaXR5PSIwLjYiLz4KCiAgPCEtLSBNb2VkYXMgLS0+CiAgPGNpcmNsZSBjeD0iMTUwIiBjeT0iMzAwIiByPSIyNSIgZmlsbD0iI0ZGRDcwMCIgb3BhY2l0eT0iMC41Ii8+CiAgPHRleHQgeD0iMTUwIiB5PSIzMDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGRjg1MDAiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIG9wYWNpdHk9IjAuOCI+JDwvdGV4dD4KICA8Y2lyY2xlIGN4PSI3NTAiIGN5PSIxNTAiIHI9IjIwIiBmaWxsPSIjRkZENzAwIiBvcGFjaXR5PSIwLjQiLz4KICA8dGV4dCB4PSI3NTAiIHk9IjE1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGODUwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iYm9sZCIgb3BhY2l0eT0iMC44Ij4kPC90ZXh0Pgo8L3N2Zz4=');
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  z-index: 2;
+  transform: translateY(var(--parallax-y2, 0px)) translateX(var(--parallax-x2, 0px));
+  will-change: transform;
+}
+
+/* Camada 3 - Balança e Gráfico de Pizza */
+.hero .parallax-layer-3 {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 18%;
+  right: 18%;
+  bottom: 8%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMDAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhbGFuw6dhIGRhIEp1c3Rpw6dhIC0tPgogIDxwYXRoIGQ9Ik0yMDAgNDUwTDIwMCA0MjBMMTgwIDQyMEwxODAgNDEwTDIyMCA0MTBMMjIwIDQyMEwyMDAgNDIwWiIgZmlsbD0iIzRGNDZFNSIgb3BhY2l0eT0iMC41Ii8+CiAgPHJlY3QgeD0iMTcwIiB5PSI0MTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjNEY0NkU1IiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIyMTAiIHk9IjQxMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiM0RjQ2RTUiIG9wYWNpdHk9IjAuNSIvPgoKICA8IS0tIEdyw6FmaWNvIGRlIFBpenphIC0tPgogIDxjaXJjbGUgY3g9IjgwMCIgY3k9IjQwMCIgcj0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNCODJGNiIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjQiLz4KICA8cGF0aCBkPSJNODAwIDQwMEw4MDAgMzYwQTQwIDQwIDAgMCAxIDgyOCAzNjhaIiBmaWxsPSIjM0I4MkY2IiBvcGFjaXR5PSIwLjUiLz4KICA8cGF0aCBkPSJNODAwIDQwMEw4MjggMzY4QTQwIDQwIDAgMCAxIDgzMiA0MDBaIiBmaWxsPSIjRkY4NTAwIiBvcGFjaXR5PSIwLjUiLz4KICA8cGF0aCBkPSJNODAwIDQwMEw4MzIgNDAwQTQwIDQwIDAgMCAxIDgwMCA0NDBaIiBmaWxsPSIjMzRBODUzIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+');
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 3;
+  transform: translateY(var(--parallax-y3, 0px));
+  will-change: transform;
+}
+
+/* Camada 4 - Relatórios e Símbolos */
+.hero .parallax-layer-4 {
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: 22%;
+  right: 22%;
+  bottom: 12%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMDAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIFJlbGF0w7NyaW9zIC0tPgogIDxyZWN0IHg9IjUwIiB5PSI1MDAiIHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNGRkYiIG9wYWNpdHk9IjAuMyIgcng9IjQiLz4KICA8bGluZSB4MT0iNjAiIHkxPSI1MjAiIHgyPSIxNDAiIHkyPSI1MjAiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNiIvPgogIDxsaW5lIHgxPSI2MCIgeTE9IjUzNSIgeDI9IjEyMCIgeTI9IjUzNSIgc3Ryb2tlPSIjMzMzMzMzIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPGxpbmUgeDE9IjYwIiB5MT0iNTUwIiB4Mj0iMTMwIiB5Mj0iNTUwIiBzdHJva2U9IiMzMzMzMzMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjYiLz4KICA8bGluZSB4MT0iNjAiIHkxPSI1NjUiIHgyPSIxMTAiIHkyPSI1NjUiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNiIvPgoKICA8IS0tIENpZnLDo28gLS0+CiAgPHRleHQgeD0iNzAwIiB5PSIzMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNGRjg1MDAiIG9wYWNpdHk9IjAuNCI+JDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjU1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzM0QTg1MyIgb3BhY2l0eT0iMC40Ij4lPC90ZXh0Pgo8L3N2Zz4=');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: 4;
+  transform: translateY(var(--parallax-y4, 0px));
+  will-change: transform;
+}
+
+/* Camada 5 - Elementos Adicionais */
+.hero .parallax-layer-5 {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  right: 25%;
+  bottom: 15%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMDAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIE5vdGFzIGZpc2NhaXMgLS0+CiAgPHJlY3QgeD0iNDUwIiB5PSI1MDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNGRkYiIG9wYWNpdHk9IjAuMyIgcng9IjQiLz4KICA8dGV4dCB4PSI0OTAiIHk9IjUyMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEwIiBmaWxsPSIjMzMzMzMzIiBvcGFjaXR5PSIwLjciPk5vdGEgRmlzY2FsPC90ZXh0PgogIDxsaW5lIHgxPSI0NjAiIHkxPSI1MzUiIHgyPSI1MjAiIHkyPSI1MzUiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjUiLz4KICA8bGluZSB4MT0iNDYwIiB5MT0iNTQ1IiB4Mj0iNTEwIiB5Mj0iNTQ1IiBzdHJva2U9IiMzMzMzMzMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC41Ii8+CiAgPGxpbmUgeDE9IjQ2MCIgeTE9IjU1NSIgeDI9IjUwMCIgeTI9IjU1NSIgc3Ryb2tlPSIjMzMzMzMzIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNSIvPgoKICA8IS0tIENhbGVuZMOhcmlvIC0tPgogIDxyZWN0IHg9IjY1MCIgeT0iNTAwIiB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9IiNGRkYiIG9wYWNpdHk9IjAuMyIgcng9IjQiLz4KICA8cmVjdCB4PSI2NTAiIHk9IjUwMCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjRkY4NTAwIiBvcGFjaXR5PSIwLjUiIHJ4PSI0Ii8+CiAgPGNpcmNsZSBjeD0iNjcwIiBjeT0iNTQwIiByPSIzIiBmaWxsPSIjMzMzMzMzIiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSI2OTAiIGN5PSI1NDAiIHI9IjMiIGZpbGw9IiMzMzMzMzMiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjcxMCIgY3k9IjU0MCIgcj0iMyIgZmlsbD0iIzMzMzMzMyIgb3BhY2l0eT0iMC42Ii8+CiAgCiAgPCEtLSBFbGVtZW50b3MgYWRpY2lvbmFpcyAtLT4KICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSI2MDAiIHI9IjMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRjg1MDAiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMTUwIiB5PSI2MDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGRjg1MDAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgb3BhY2l0eT0iMC43Ij4lPC90ZXh0PgogIDxjaXJjbGUgY3g9Ijg1MCIgY3k9IjU1MCIgcj0iMTUiIGZpbGw9IiNGRkQ3MDAiIG9wYWNpdHk9IjAuNCIvPgogIDx0ZXh0IHg9Ijg1MCIgeT0iNTU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkY4NTAwIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIiBvcGFjaXR5PSIwLjgiPiQ8L3RleHQ+Cjwvc3ZnPg==');
+  background-size: 65%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 5;
+  transform: translateY(var(--parallax-y5, 0px));
+  will-change: transform;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.8) 100%);
+  z-index: 2;
+}
+
+/* Efeito de linhas animadas removido */
+/* .backgroundAnimation {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,6 +120,7 @@
   bottom: 0;
   z-index: 1;
   opacity: 0.1;
+  backdrop-filter: blur(2px);
 }
 
 .animatedLines {
@@ -37,14 +140,14 @@
   100% {
     transform: translate(50px, 50px);
   }
-}
+} */
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   width: 100%;
   display: flex;

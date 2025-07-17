@@ -1,29 +1,58 @@
 // src/components/Hero/index.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './styles.module.css';
 import { Button } from '../Button';
 
 export function Hero() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const heroRef = useRef<HTMLElement>(null);
   const titleWords = ['Contabilidade', 'Inteligente', 'para', 'o', 'Sucesso', 'do', 'seu', 'Negócio'];
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
+      const currentScrollY = window.scrollY;
+      
+      // Efeito parallax no fundo com múltiplas camadas
+      if (heroRef.current) {
+        // Diferentes velocidades para cada camada
+        const layer1Speed = 0.3; // Elementos mais lentos (fundo)
+        const layer2Speed = 0.5; // Elementos médios
+        const layer3Speed = 0.7; // Elementos mais rápidos (frente)
+        const layer4Speed = 0.2; // Elementos muito lentos
+        const layer5Speed = 0.8; // Elementos muito rápidos
+        
+        // Movimento horizontal também
+        const horizontalOffset1 = Math.sin(currentScrollY * 0.001) * 10;
+        const horizontalOffset2 = Math.cos(currentScrollY * 0.0015) * 15;
+        
+        const translateY1 = currentScrollY * layer1Speed;
+        const translateY2 = currentScrollY * layer2Speed;
+        const translateY3 = currentScrollY * layer3Speed;
+        const translateY4 = currentScrollY * layer4Speed;
+        const translateY5 = currentScrollY * layer5Speed;
+        
+        heroRef.current.style.setProperty('--parallax-y1', `${translateY1}px`);
+        heroRef.current.style.setProperty('--parallax-y2', `${translateY2}px`);
+        heroRef.current.style.setProperty('--parallax-y3', `${translateY3}px`);
+        heroRef.current.style.setProperty('--parallax-y4', `${translateY4}px`);
+        heroRef.current.style.setProperty('--parallax-y5', `${translateY5}px`);
+        heroRef.current.style.setProperty('--parallax-x1', `${horizontalOffset1}px`);
+        heroRef.current.style.setProperty('--parallax-x2', `${horizontalOffset2}px`);
+      }
       
       // Detecta quando o usuário começa a rolar
       // Usa apenas 50px como threshold para desaparecer rapidamente
       const threshold = 50;
       
-      if (scrollPosition > threshold) {
+      if (currentScrollY > threshold) {
         setShowScrollIndicator(false);
       } else {
         setShowScrollIndicator(true);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -67,12 +96,7 @@ export function Hero() {
     }
   };
 
-  const backgroundVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1
-    }
-  };
+
 
   const handleCTAClick = () => {
     const element = document.getElementById('contato');
@@ -82,17 +106,15 @@ export function Hero() {
   };
 
   return (
-    <section className={styles.hero}>
-      {/* Background Animation */}
-      <motion.div 
-        className={styles.backgroundAnimation}
-        variants={backgroundVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className={styles.animatedLines}></div>
-      </motion.div>
+    <section ref={heroRef} className={styles.hero}>
+      {/* Background Animation - Removido */}
 
+      {/* Camadas de parallax */}
+      <div className={styles['parallax-layer-2']}></div>
+      <div className={styles['parallax-layer-3']}></div>
+      <div className={styles['parallax-layer-4']}></div>
+      <div className={styles['parallax-layer-5']}></div>
+      
       <div className={styles.container}>
         <motion.div 
           className={styles.content}
